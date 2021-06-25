@@ -11,7 +11,7 @@ html, body {
 }
 
 header {
-	background: url(http://www.hbea.edu.cn/gkcj2019/images/top_bg.jpg) 0 0 no-repeat;
+	background: url(../img/top_bg.jpg) 0 0 no-repeat;
 	border-bottom: 3px solid #3183c5;
 }
 
