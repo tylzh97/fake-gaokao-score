@@ -28,4 +28,9 @@ const app = new Vue({
 		console.log("无数据源");
 	}
   },
+  methods: {
+	  retnav: function() {
+		  document.location = "./nav.html"
+	  }
+  }
 });

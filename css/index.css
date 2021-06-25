@@ -13,6 +13,7 @@ html, body {
 header {
 	background: url(../img/top_bg.jpg) 0 0 no-repeat;
 	border-bottom: 3px solid #3183c5;
+	padding: 5px 0px 0px 3px;
 }
 
 article {
@@ -23,6 +24,7 @@ article {
 article .title {
 	margin: 0 auto;
 	width: 530px;
+	max-width: 100%;
 }
 
 article .content {
