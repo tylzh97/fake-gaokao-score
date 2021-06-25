@@ -9,10 +9,10 @@
 		<div id="app">
 			<div>
 				<p>名字 <input v-model="name" type="text" name="name" /></p>
-				<p>语文 <input v-model="score.yw" type="number" name="yw" /></p>
-				<p>数学 <input v-model="score.sx" type="number" name="sx" /></p>
-				<p>英语 <input v-model="score.yy" type="number" name="yy" /></p>
-				<p>综合 <input v-model="score.zh" type="number" name="zh" /></p>
+				<p>语文 <input v-model="_score.yw" type="number" name="yw" /></p>
+				<p>数学 <input v-model="_score.sx" type="number" name="sx" /></p>
+				<p>英语 <input v-model="_score.yy" type="number" name="yy" /></p>
+				<p>综合 <input v-model="_score.zh" type="number" name="zh" /></p>
 				<p>总分 {{ score.yw + score.sx + score.yy + score.zh }}</p>
 				<button v-on:click="generate">生成</button>
 			</div>
@@ -34,6 +34,14 @@
 					}
 				  }
 			  },
+			  computed: {
+				  _score() {
+					  for (let k in this.score) {
+						  this.score[k] = parseInt(this.score[k])
+					  }
+					  return this.score
+				  },
+			  },
 			  mounted() {
 			  	console.log("Hello World!");
 			  },
@@ -47,7 +55,8 @@
 					  const b64 = Base64.encode(JSON.stringify(data));
 					  document.location = "./index.html?b64="+b64;
 				  }
-			  }
+			  },
+			  watch: {},
 			});
 		</script>
 	</body>
