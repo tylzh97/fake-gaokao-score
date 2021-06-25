@@ -17,12 +17,11 @@ const app = new Vue({
   },
   mounted() {
   	const url = window.location.href;
-	const b64para = url.match(/b64=([\w\d]+)/g);
+	const b64para = url.match(/b64=(.+)/g);
 	if (b64para) {
 		const b64 = b64para[0].replace('b64=', '');
 		const b64str = Base64.decode(b64);
 		const data = JSON.parse(b64str);
-		console.log(data);
 		this.info.name = data.name;
 		this.score = data.score;
 	} else {
