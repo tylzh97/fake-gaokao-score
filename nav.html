@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>高考成绩单生成</title>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<p>名字 <input v-model="name" type="text" name="name" /></p>
+				<p>语文 <input v-model="score.yw" type="number" name="yw" /></p>
+				<p>数学 <input v-model="score.sx" type="number" name="sx" /></p>
+				<p>英语 <input v-model="score.yy" type="number" name="yy" /></p>
+				<p>综合 <input v-model="score.zh" type="number" name="zh" /></p>
+				<p>总分 {{ score.yw + score.sx + score.yy + score.zh }}</p>
+				<button v-on:click="generate">生成</button>
+			</div>
+		</div>
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
+		<script type="text/javascript">
+			const app = new Vue({
+			  el: '#app',
+			  data: () => {
+				  return {
+					message: "Hello Vue!",
+					name: "王哲凝",
+					score: {
+						yw: 150,
+						sx: 150,
+						yy: 150,
+						zh: 300,
+					}
+				  }
+			  },
+			  mounted() {
+			  	console.log("Hello World!");
+			  },
+			  methods: {
+				  generate: function() {
+					  const data = {
+						  name: this.name,
+						  score: this.score
+					  };
+					  console.log(JSON.stringify(data));
+					  const b64 = Base64.encode(JSON.stringify(data));
+					  document.location = "./index.html?b64="+b64;
+				  }
+			  }
+			});
+		</script>
+	</body>
+</html>

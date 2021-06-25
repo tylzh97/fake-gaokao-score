@@ -1,0 +1,97 @@
+. {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	top: 100%;
+	font: 14px/1.5 tahoma, arial, sans-serif;
+}
+
+header {
+	background: url(http://www.hbea.edu.cn/gkcj2019/images/top_bg.jpg) 0 0 no-repeat;
+	border-bottom: 3px solid #3183c5;
+}
+
+article {
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+article .title {
+	margin: 0 auto;
+	width: 530px;
+}
+
+article .content {
+	padding-top: 50px;
+}
+
+article .content .title {
+	color: #2674c4;
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 4px;
+	font-weight: bold;
+}
+
+.info {
+	padding-top: 30px;
+	font-size: 16px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.info table {
+	margin: 0 auto;
+}
+
+.info th {
+	width: 120px;
+	font-weight: 900;
+	text-align: right;
+	padding-right: 6px;
+}
+
+.info td {
+	width: 150px;
+	text-align: left;
+}
+
+article .score {
+	font-size: 16px;
+}
+
+article .score table {
+	margin: 0 auto;
+	background-color: #eee;
+	border-color: #eee;
+}
+
+article .score table th {
+	padding: 3px;
+	width: 150px;
+}
+
+article .score table td {
+	padding: 3px;
+	width: 150px;
+}
+
+article .return {
+	margin-top: 30px;
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 8px 20px;
+	border: 0px;
+	background-color: #3183c5;
+}
+
+footer {}
+
+.red {
+	color: red;
+}

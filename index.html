@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<img src="http://www.hbea.edu.cn/gkcj2019/images/logo.png" alt="">
+			</header>
+			<article>
+				<div class="content">
+					<div class="title">2021年湖北省普通高等学校招生考试成绩查询</div>
+					<div class="info">
+						<table>
+							<tr>
+								<th>姓名:</th>
+								<td>{{ info.name }}</td>
+								<th>身份证号:</th>
+								<td>{{ info.id }}</td>
+							</tr>
+							<tr>
+								<th>准考证号:</th>
+								<td>{{ info.zkz }}</td>
+								<th>高考报名号:</th>
+								<td>{{ info.bmh }}</td>
+							</tr>
+						</table>
+					</div>
+					<div class="score">
+						<table border="1"  cellspacing="0" cellpadding="0">
+							<tr><th>科目名称</th><th>科目成绩</th></tr>
+							<tr><td>语文</td><td>{{ score.yw }}</td></tr>
+							<tr><td>数学</td><td>{{ score.sx }}</td></tr>
+							<tr><td>外语</td><td>{{ score.yy }}</td></tr>
+							<tr><td>综合</td><td>{{ score.zh }}</td></tr>
+							<tr class="red"><td>总分</td><td>
+								{{ score.yw + score.sx + score.yy + score.zh }}
+							</td></tr>
+						</table>
+					</div>
+					<button class="return" type="button">返回继续查询</button>
+				</div>
+			</article>
+			<footer></footer>
+		</div>
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
