@@ -3,7 +3,7 @@ const app = new Vue({
   data: {
     message: 'Hello Vue!',
 	info: {
-		name: "刘春江", 
+		name: "请输入姓名", 
 		id: "4012199709065062",
 		zkz: "00076182",
 		bmh: "202192816293",
